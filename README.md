@@ -9,14 +9,13 @@ This project is a **Leave Request Management System** that allows users to submi
 
 #### Backend:
 - **Laravel**: PHP framework for building RESTful APIs and handling business logic.
-- **MySQL**: A relational database used to store data, accessed via the **Sequelize ORM**.
+- **MySQL**: A relational database used to store data.
 - **Docker**: Used to containerize the backend, MySQL, and other services for consistent deployment and scalability.
 - **Postman**: Used for testing and interacting with the API.
 
 #### Frontend:
 - **Vue.js**: JavaScript framework for building interactive user interfaces and dynamic components.
 - **Axios**: Used for making API calls to the backend from the frontend.
-- **Docker**: Containerizes the frontend to simplify the development and deployment process.
 
 #### Database:
 - **MySQL**: The primary database for both development and testing environments.
@@ -69,8 +68,8 @@ To run the project locally, follow the steps below:
    This command will start the backend, nginx, and MySQL services in their respective containers.
 
 3. **Access the application**:
-   - **Frontend**: http://localhost:8080
-   - **Backend (API)**: http://localhost:3000
+   - **Frontend**: http://localhost:3000
+   - **Backend (API)**: http://localhost:8080
 
 4. **Run migrations and seeders**:
    After starting the Docker containers, run the migrations and seeders to set up the database:
