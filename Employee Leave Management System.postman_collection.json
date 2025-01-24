@@ -1,0 +1,379 @@
+{
+	"info": {
+		"_postman_id": "bc3b4ff5-a1d4-4026-b5e1-9fd31bfda7d7",
+		"name": "Employee Leave Management System",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "15155481",
+		"_collection_link": "https://spechy.postman.co/workspace/floyd~994fd0df-800f-404b-afe4-543a75af70ba/collection/15155481-bc3b4ff5-a1d4-4026-b5e1-9fd31bfda7d7?action=share&source=collection_link&creator=15155481"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Login",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\" : \"adminUser@example.com\",\r\n    \"password\" : \"admin001\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/login"
+					},
+					"response": []
+				},
+				{
+					"name": "LogOut",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "4|KWDG0ONGgP0UQ5cz17a4RwJFKVAOH0fKdnsb6wNTdbfa8daf"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": "http://localhost:8080/api/logout"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "2|TnnaFi01PcMJNV8bZ3r3DzoNomZxrbXKUEKE2xrQ94cf6f31"
+							}
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": "http://localhost:8080/api/v1/user/2"
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "1|PMZcLmJcz4egggNrc3AiUMC315beElAxVzgkppKbceedce16"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\" : \"asssdsasdsddsdd@wiki.com\",\r\n    \"password\" : \"passwor=D123\",\r\n    \"name\" : \"adnan\",\r\n    \"surname\" : \"tasdemir\",\r\n    \"password_confirmation\": \"passwor=D123\",\r\n    \"username\" : \"ammassassdsdrsdfgddissdasddouif1123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/v1/user/"
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "2|TnnaFi01PcMJNV8bZ3r3DzoNomZxrbXKUEKE2xrQ94cf6f31"
+							}
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"amma1r1@wiki.com\",\r\n    \"password\": \"passwor=D123\",\r\n    \"name\": \"adnan\",\r\n    \"surname\": \"tasdemir\",\r\n    \"password_confirmation\": \"passwor=D123\",\r\n    \"username\": \"ammar11\",\r\n    \"status\": \"inactive\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/v1/user/3"
+					},
+					"response": []
+				},
+				{
+					"name": "List",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true,
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "18|2NQQBz5xHHkW573n4N35zYBGTVv9koosopKDJ2M2c6f685d5"
+							}
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/v1/user/list"
+					},
+					"response": []
+				},
+				{
+					"name": "Select",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "2|TnnaFi01PcMJNV8bZ3r3DzoNomZxrbXKUEKE2xrQ94cf6f31"
+							}
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": "http://localhost:8080/api/v1/user/3"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Leave Request",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "1|ph98kUWQXuwe0bgYm1FnWVWvJ1VCsArlRQrQYFWL2e177f4e"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"start_date\" : \"2025-02-10\",\r\n    \"end_date\" : \"2025-02-13\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/v1/leave-request/"
+					},
+					"response": []
+				},
+				{
+					"name": "Approve",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "1|A3A4V8aufIQQafOfcxZ4k64u9Tg6uwSLorxUqJxb40d42225"
+							}
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/v1/leave-request/approve-request/3"
+					},
+					"response": []
+				},
+				{
+					"name": "Reject",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "2|NnJwKwkIOhoBhuAP8r20E6q6JnJcRyjxRstKqRCnaa9ac31a"
+							}
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/v1/leave-request/reject-request/4"
+					},
+					"response": []
+				},
+				{
+					"name": "List",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true,
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "1|A3A4V8aufIQQafOfcxZ4k64u9Tg6uwSLorxUqJxb40d42225"
+							}
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user_id\" : 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/v1/leave-request/list"
+					},
+					"response": []
+				},
+				{
+					"name": "List For User",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true,
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "6|tmJur5bVo1rFvE539iugrj1CcVDjqsqj8yo33eaHc86dd06b"
+							}
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user_id\" : 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/v1/leave-request/"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

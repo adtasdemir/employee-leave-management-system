@@ -59,8 +59,7 @@ To run the project locally, follow the steps below:
 
 1. **Clone the repository**:
    ```bash
-   git clone <repository-url>
-   cd leave-request-management
+   git clone [<repository-url>](https://github.com/adtasdemir/employee-leave-management-system.git)
    ```
 
 2. **Build and start the Docker containers**:
@@ -98,12 +97,15 @@ docker-compose exec backend php artisan test
 
 ---
 
-## License
+## Postman Collection
 
-Include your license information here, e.g., MIT, GPL, etc.
+The **Postman collection** for the API is included in the project as `Employee Leave Management System.postman_collection`. You can import this collection into Postman to easily test the API endpoints.
 
 ---
+
 
 ### Final Notes
 
 This project is fully containerized with **Docker**, ensuring consistency across different environments. It is designed to scale efficiently and is highly maintainable due to the modular architecture. It includes all necessary components for user management, leave request handling, and API testing.
+
+
