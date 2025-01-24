@@ -104,7 +104,18 @@ The **Postman collection** for the API is included in the project as `Employee L
 
 
 ### Final Notes
+In order to improve both the performance and accuracy of leave management, several key enhancements and updates have been made to the project. These updates focus on improving how leave data is handled and ensuring the stability of the application by testing core components involved in the leave request process.
 
-This project is fully containerized with **Docker**, ensuring consistency across different environments. It is designed to scale efficiently and is highly maintainable due to the modular architecture. It includes all necessary components for user management, leave request handling, and API testing.
+#### Keys:
+
+##### User Model Enhancement
+A new field called remaining_annual_leave_days has been added to the User model. This field stores the remaining annual leave days for each user, removing the need to calculate it dynamically from the leave_requests table each time. By storing this value directly, the application avoids unnecessary computations, improving performance when managing leave days.
+
+##### LeaveRequestRepository Logic
+The LeaveRequestRepository contains important business logic for handling leave requests. It is responsible for interacting with the database and performing key operations like saving, updating, and querying leave requests. 
+
+##### LeaveRequestControllerTest
+The LeaveRequestControllerTest is designed to ensure that the leave request functionality is working as expected at the controller level. It tests (All Cases) the API endpoints that interact with leave requests, validating that the expected outcomes occur when creating, updating, or deleting leave requests. The tests cover various cases, including checking for proper leave day calculations, user validation, and error handling.
+
 
 
