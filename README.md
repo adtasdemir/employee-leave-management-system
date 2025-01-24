@@ -108,13 +108,13 @@ In order to improve both the performance and accuracy of leave management, sever
 
 #### Keys:
 
-##### User Model Enhancement
+- **User Model Enhancement**:
 A new field called remaining_annual_leave_days has been added to the User model. This field stores the remaining annual leave days for each user, removing the need to calculate it dynamically from the leave_requests table each time. By storing this value directly, the application avoids unnecessary computations, improving performance when managing leave days.
 
-##### LeaveRequestRepository Logic
+- **LeaveRequestRepository Logic**:
 The LeaveRequestRepository contains important business logic for handling leave requests. It is responsible for interacting with the database and performing key operations like saving, updating, and querying leave requests. 
 
-##### LeaveRequestControllerTest
+- **LeaveRequestControllerTest**:
 The LeaveRequestControllerTest is designed to ensure that the leave request functionality is working as expected at the controller level. It tests (All Cases) the API endpoints that interact with leave requests, validating that the expected outcomes occur when creating, updating, or deleting leave requests. The tests cover various cases, including checking for proper leave day calculations, user validation, and error handling.
 
 
